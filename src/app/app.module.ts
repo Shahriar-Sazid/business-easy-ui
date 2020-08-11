@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +17,10 @@ import { FormsComponent } from './pages/forms/forms.component';
 import { TypographyComponent } from './pages/typography/typography.component';
 import { MapsComponent } from './pages/maps/maps.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgbCollapseModule, NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductComponent } from './pages/product/product.component';
+import { SearchOptionsComponent } from './components/search-options/search-options.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +33,19 @@ import { NotificationsComponent } from './pages/notifications/notifications.comp
     FormsComponent,
     TypographyComponent,
     MapsComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    ProductComponent,
+    SearchOptionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
     BrowserAnimationsModule,
-    CollapseModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxDatatableModule,
+    NgbCollapseModule,
+    NgbAccordionModule
     ],
   providers: [],
   bootstrap: [AppComponent]
